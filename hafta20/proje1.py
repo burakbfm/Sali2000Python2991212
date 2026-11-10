@@ -10,9 +10,12 @@ kalem.pensize(3)
 # Görev 1: Fareyle çizim fonksiyonu oluştur.
 
 # Görev 2: Renk değiştirme fonksiyonları ekle.
-
+def kirmizi():
+    kalem.pencolor("red")
+    
 # Görev 3: Ekranı temizleme özelliği ekle.
 
 # Görev 4: Klavye olaylarını tanımla.
+ekran.onkey(kirmizi, "r")
 
 ekran.mainloop()
