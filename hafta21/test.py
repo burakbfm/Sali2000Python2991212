@@ -15,13 +15,19 @@ hedef = play.new_box(color="green",
                      width=60,
                      height=60)
 
-@play.when_key_pressed("d","a")
+@play.when_key_pressed("d","a","w","s")
 def haraket(tus):
-    if tus == "d":
-        karakter.x += 5
+    if tus == "d": 
+        karakter.x = min(315, karakter.x + 5)
 
     elif tus == "a":
-        karakter.x -= 5
+        karakter.x = max(-315, karakter.x - 5)
+
+    elif tus == "w":
+        karakter.y =  min(215, karakter.y + 5)
+
+    elif tus == "s":
+        karakter.y = max(-215, karakter.y - 5)
 
 play.start_program()
 
